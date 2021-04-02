@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { AddClaimComponent } from './add-claim/add-claim.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { GetClaimComponent } from './get-claim/get-claim.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddClaimComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    GetClaimComponent
   ],
   imports: [
     BrowserModule,
