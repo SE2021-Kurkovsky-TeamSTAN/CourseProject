@@ -2,6 +2,7 @@
     <div class = "websiteTitle">
         <p>Filing your Incident Report</p>
        </div>
+    <form action="http://127.0.0.1:5000/addclaim" method="post">
     <div class = "inputsWrap">
       <div class = "policyHolderContactInfo">
         <p class = "sectionHeader">Policyholder Contact Info</p>
@@ -10,7 +11,8 @@
               <div class="form-group has-feedback rowItem">
                 <label for="fName" class="control-label">First Name</label>
                 <input id="fName" type="text" class="form-control" name="fName" data-error="Please enter your first name." aria-required="true" required/> 
-                <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
+                <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span>
+                <div class="help-block with-errors"></div>
               </div>                  
             </div>
             <div class="inputGrouping">
@@ -69,33 +71,33 @@
               <legend class="radio-checkbox-title radio-checkbox-title-horizontal">Category of Claim</legend>
               <div>
                 <label class="radio-inline">
-              <input type="radio" class="form-control" value="Radio Option 1" name="HorizontalStackedRadio" data-error="Please check one option" required>
+              Category: <input type="radio" class="form-control" value="Bodily Injury Liability" name="category" data-error="Please check one option" required>
               <span>Bodily Injury Liability</span>
             </label>
             
                 <label class="radio-inline">
-              <input type="radio" class="form-control" value="Radio Option 2" name="HorizontalStackedRadio" data-error="Please check one option" required>
+              Category: <input type="radio" class="form-control" value="Medical Payments or Personal Injury Protection (PIP)" name="category" data-error="Please check one option" required>
               <span>Medical Payments or Personal Injury Protection (PIP)</span>
             </label>
             
                 <label class="radio-inline">
-              <input type="radio" class="form-control" value="Radio Option 3" name="HorizontalStackedRadio" data-error="Please check one option" required>
+              Category: <input type="radio" class="form-control" value="Property Damage Liability" name="category" data-error="Please check one option" required>
               <span>Property Damage Liability</span>
             </label>
               </div>
               <div>
                 <label class="radio-inline">
-              <input type="radio" class="form-control" value="Radio Option 1" name="HorizontalStackedRadio" data-error="Please check one option" required>
+              Category: <input type="radio" class="form-control" value="Collision" name="category" data-error="Please check one option" required>
               <span>Collision</span>
             </label>
             
                 <label class="radio-inline">
-              <input type="radio" class="form-control" value="Radio Option 2" name="HorizontalStackedRadio" data-error="Please check one option" required>
+              Category: <input type="radio" class="form-control" value="Comprehensive" name="category" data-error="Please check one option" required>
               <span>Comprehensive</span>
             </label>
             
                 <label class="radio-inline">
-              <input type="radio" class="form-control" value="Radio Option 3" name="HorizontalStackedRadio" data-error="Please check one option" required>
+              Category: <input type="radio" class="form-control" value="Uninsured and Underinsured Motorist Coverage" name="category" data-error="Please check one option" required>
               <span>Uninsured and Underinsured Motorist Coverage</span>
             </label>
               
@@ -106,7 +108,7 @@
           <div class="inputGrouping">
             <div class="form-group has-feedback rowItem">
               <label for="fName" class="control-label">Policy Number</label>
-              <input id="fName" type="text" class="form-control" name="fName" data-error="Please enter your first name." aria-required="true" required/> 
+              Policynumber: <input id="fName" type="text" class="form-control" name="policynumber" data-error="Please enter your first name." aria-required="true" required/> 
               <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
             </div>
           </div>
@@ -115,30 +117,32 @@
           <div class="inputGrouping">
             <div class="form-group has-feedback rowItem">
               <label for="fName" class="control-label">Location of Loss (Approximate Street Address)</label>
-              <input id="fName" type="text" class="form-control" name="fName" data-error="Please enter your first name." aria-required="true" required/> 
+              Location: <input id="fName" type="text" class="form-control" name="location" data-error="Please enter your first name." aria-required="true" required/> 
               <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
             </div>
           </div>
           <div class="inputGrouping">
             <div class="form-group has-feedback disabled">
               <label for="name" class="control-label">Location in Longtitude, Latitude Coordinates:</label>
-              <input id="name" type="text" class="form-control" name="name" data-error="Please enter your name." disabled aria-required="false"/> 
+              <input id="name" type="text" class="form-control" name="latlong" data-error="Please enter your name." disabled aria-required="false"/> 
               <span class="icon icon-attention form-control-feedback" aria-hidden="true" disabled ></span><div class="help-block with-errors"></div>
             </div>
           </div>
         </div>
         <div class = "inputRow">
           <div class="inputGrouping">
+          	Description: <input name="description" type="text" /> <br />
+          	<!--
             <div class="form-group has-feedback">
               <label for="comment">Description of Incident</label>
               <textarea class="form-control" maxlength="250" rows="5" id="comment" aria-required="true" required></textarea><small class="textarea-character-limit"></small>
               <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
             </div>
+        	-->
           </div>
         </div> 
-        <button class="btn btn-secondary btn-block">
-          <span>Submit</span>
-        </button>
+        <input type="submit" />
       </div>
     </div>
+    </form>
   </div>
