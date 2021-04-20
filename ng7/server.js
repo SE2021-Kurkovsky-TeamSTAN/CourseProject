@@ -11,6 +11,13 @@ app.get('/', function (req, res) {
 });
 
 app.post('/addclaim', function (req, res) {
+	var firstname = req.body.firstname;
+	var lastname = req.body.lastname;
+	var phonenumber = req.body.phonenumber;
+	var email = req.body.email;
+	var pholderstreetaddress = req.body.pholderstreetaddress;
+	var pholdertown = req.body.pholdertown;
+	var pholderzip = req.body.pholderzip;
 	var policynumber = req.body.policynumber;
 	var location = req.body.location;
 	var category = req.body.category;
@@ -19,7 +26,7 @@ app.post('/addclaim', function (req, res) {
 	MongoClient.connect(url, function(err, db) {
   		if (err) throw err;
   		var dbo = db.db("testdb");
-  		var myobj = { policynumber: policynumber, location: location, category: category, description: description };
+  		var myobj = { firstname: firstname, lastname: lastname, phonenumber: phonenumber, email: email, pholderstreetaddress: pholderstreetaddress, pholdertown: pholdertown, pholderzip: pholderzip, policynumber: policynumber, location: location, category: category, description: description };
  		dbo.collection("claim").insertOne(myobj, function(err, res) {
     			if (err) throw err;
     			console.log("1 document inserted");
