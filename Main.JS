@@ -21,10 +21,10 @@ function storeInfo(){   //is called when the user presses the 'submit' button.
 } 
 
 function updateLocation(locationOfLoss){  //this will be the method to convert the location of the loss to coordinates
-    //address=24%20Sussex%20Drive%20Ottawa%20ON
-    //locationOfLoss will need to be parsed and ' ' characters will need to be replaced with '%20'
-    //https://maps.googleapis.com/maps/api/geocode/json?locationOfLoss
-    coordinates = "41.769703,-72.686981";
+    //example: address=24%20Sussex%20Drive%20Ottawa%20ON
+    //locationOfLoss will need to be parsed and space characters will need to be replaced with %20
+    //https://maps.googleapis.com/maps/api/geocode/json?address=locationOfLoss&key=123456789-abcdef
+    coordinates = "41.769703,-72.686981"; //geometry.location.lat, geometry.location.lng
 }
 
 let claim = {
