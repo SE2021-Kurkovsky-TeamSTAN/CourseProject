@@ -1,10 +1,9 @@
 <div class = "fullBodyWrap">
-<<<<<<< Updated upstream
     <div class = "websiteTitle">
         <p>Filing your Incident Report</p>
-       </div>
-    <form action="http://127.0.0.1:5000/addclaim" method="post">
-    <div class = "inputsWrap">
+        <p>All information is required unless it's listed as optional</p>
+    </div>
+    <form class = "inputsWrap" data-toggle="validator" role="form" action="http://127.0.0.1:5000/addclaim" method="post">
       <div class = "policyHolderContactInfo">
         <p class = "sectionHeader">Policyholder Contact Info</p>
         <div class = "inputRow">
@@ -29,31 +28,15 @@
             <div class="form-group has-feedback rowItem">
               <label for="phonenumber" class="control-label">Phone number (optional)</label>
               <input id="phonenumber" type="tel" class="form-control phone" name="phonenumber" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" placeholder="xxx-xxx-xxxx" data-error="That doesn't look quite right. Please enter your phone number in this format: xxx-xxx-xxxx." aria-required="false"/>
-=======
-  <div class = "websiteTitle">
-      <h3>Filing your Incident Report</h3>
-      <p>All information is required unless it's listed as optional</p>
-  </div>
-  
-  <form class = "inputsWrap" data-toggle="validator" role="form">
-    <div class = "policyHolderContactInfo">
-      <p class = "sectionHeader">Policyholder Contact Info</p>
-      <div class = "inputRow">
-          <div class="inputGrouping">
-            <div class="form-group has-feedback rowItem">
-              <label for="fName" class="control-label">First Name</label>
-              <input id="fName" type="text" class="form-control" name="fName" data-error="Please enter your first name." aria-required="true" required/> 
->>>>>>> Stashed changes
               <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
             </div>                  
           </div>
           <div class="inputGrouping">
-            <div class="form-group has-feedback rowItem">
-              <label for="lName" class="control-label">Last Name</label>
-              <input id="lName" type="text" class="form-control" name="lName" data-error="Please enter your last name." aria-required="true" required/> 
+            <div class="form-group has-feedback">
+              <label for="email" class="control-label">Email</label>
+              <input id="email" type="email" class="form-control" name="email" pattern=".*@\w{2,}\.\w{2,}.*" data-error="That doesn’t look quite right. Please enter your email in this format: name@domain.com." aria-required="true" required/>
               <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
-            </div>                  
-          </div>
+            </div>
       </div>
       <div class="inputRow">
         <div class="inputGrouping">
@@ -63,7 +46,6 @@
             <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
           </div>                   
         </div>
-<<<<<<< Updated upstream
         <div class = "inputRow">
             <div class="inputGrouping">
               <div class="form-group has-feedback rowItem">
@@ -86,19 +68,10 @@
                 <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
               </div>                                  
             </div>
-=======
-        <div class="inputGrouping">
-          <div class="form-group has-feedback">
-            <label for="email" class="control-label">Email</label>
-            <input id="email" type="email" class="form-control" name="email" pattern=".*@\w{2,}\.\w{2,}.*" data-error="That doesn’t look quite right. Please enter your email in this format: name@domain.com." aria-required="true" required/>
-            <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
-          </div>
->>>>>>> Stashed changes
         </div>
       </div>
       <div class = "inputRow">
           <div class="inputGrouping">
-<<<<<<< Updated upstream
             <fieldset class="form-group">
               <legend class="radio-checkbox-title radio-checkbox-title-horizontal">Category of Claim</legend>
               <div>
@@ -131,68 +104,33 @@
                 <label class="radio-inline">
               Category: <input type="radio" class="form-control" value="Uninsured and Underinsured Motorist Coverage" name="category" data-error="Please check one option" required>
               <span>Uninsured and Underinsured Motorist Coverage</span>
-            </label>
+            </label> 
+            
+------------categorypolicy-location
               
               </div>
-=======
-            <div class="form-group has-feedback rowItem">
-              <label for="streetAddress" class="control-label">Street Address:</label>
-              <input id="streetAddress" type="text" class="form-control" name="streetAddress" data-error="Please enter your first name." aria-required="true" required/> 
->>>>>>> Stashed changes
               <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
             </div>                  
           </div>
           <div class="inputGrouping">
             <div class="form-group has-feedback rowItem">
-<<<<<<< Updated upstream
               <label for="fName" class="control-label">Policy Number</label>
               Policynumber: <input id="fName" type="text" class="form-control" name="policynumber" data-error="Please enter your first name." aria-required="true" required/> 
-=======
-              <label for="city" class="control-label">Town/City:</label>
-              <input id="city" type="text" class="form-control" name="city" data-error="Please enter your town or city." aria-required="true" required/> 
->>>>>>> Stashed changes
               <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
             </div>                 
           </div>
           <div class="inputGrouping">
-<<<<<<< Updated upstream
             <div class="form-group has-feedback rowItem">
               <label for="fName" class="control-label">Location of Loss (Approximate Street Address)</label>
               Location: <input id="fName" type="text" class="form-control" name="location" data-error="Please enter your first name." aria-required="true" required/> 
-=======
-            <div class="form-group has-feedback">
-              <label for="zip" class="control-label">ZIP Code</label>
-              <input id="zip" type="text" class="form-control zip" name="zip" minlength="5" maxlength="10" placeholder="00000 or 00000-0000" pattern="(\d{5}([\-]\d{4})?)" data-error="Please enter your zip code." aria-required="true" required/>
->>>>>>> Stashed changes
               <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
             </div>                                  
           </div>
-<<<<<<< Updated upstream
           <div class="inputGrouping">
             <div class="form-group has-feedback disabled">
               <label for="name" class="control-label">Location in Longtitude, Latitude Coordinates:</label>
               <input id="name" type="text" class="form-control" name="latlong" data-error="Please enter your name." disabled aria-required="false"/> 
               <span class="icon icon-attention form-control-feedback" aria-hidden="true" disabled ></span><div class="help-block with-errors"></div>
-=======
-      </div>
-    </div>
-    <div class = "claimData">
-      <p class = "sectionHeader">Incident Report / Claim Data</p>
-      <div class = "inputRow">
-        <div class="inputGrouping">
-            <label for="HorizSelectAlt" class="control-label select-label">Category of Claim</label>
-            <div class="select-container">
-              <select id="categoryOfClaimInput" name="HorizSelectAlt" class="form-control" required>
-                <option value="">Please Select</option>
-                <option value="categoryBodily">Bodily Injury Liability</option>
-                <option value="categoryMedical">Medical Payments or Personal Injury Protection (PIP)</option>
-                <option value="categoryProperty">Property Damage Liability</option>
-                <option value="categoryCollision">Collision</option>
-                <option value="categoryComprehensive">Comprehensive</option>
-                <option value="categoryUninsured">Uninsured and Underinsured Motorist Coverage</option>
-              </select>
-              <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
->>>>>>> Stashed changes
             </div>
           </div>
       </div>
@@ -223,23 +161,7 @@
     </form>
   </div>
 =======
-      </div> 
-      <div class = "inputRow">
-        <div class="inputGrouping">
-          <div class="form-group has-feedback rowItem">
-            <label for="location" class="control-label">Location of Loss (Approximate Street Address)</label>
-            <input id="locationOfLossInput" type="text" class="form-control" name="location" data-error="Please enter an approximate address for where the incident occured." aria-required="true" required/> 
-            <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
-          </div>
-        </div>
-        <div class="inputGrouping">
-          <div class="form-group has-feedback disabled">
-            <label for="coordinates" class="control-label">Location in Longtitude, Latitude Coordinates:</label>
-            <input id="coordinatesOutput" type="text" class="form-control" name="coordinates" disabled aria-required="false"/> 
-            <span class="icon icon-attention form-control-feedback" aria-hidden="true" disabled ></span><div class="help-block with-errors"></div>
-          </div>
-        </div>
-      </div>
+      
       <div class = "inputRow">
         <div class="inputGrouping">
           <div class="form-group has-feedback">
@@ -250,7 +172,7 @@
         </div>
       </div> 
       <div class="submit">
-        <button class="btn btn-secondary btn-block btn-border" onclick="storeInfo()">
+        <button class="btn btn-secondary btn-block btn-border" onclick="submit">
           <span>Submit</span>
         </button>
       </div>
