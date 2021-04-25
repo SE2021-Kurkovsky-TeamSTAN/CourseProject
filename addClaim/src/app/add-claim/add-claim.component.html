@@ -7,20 +7,20 @@
     <div class = "policyHolderContactInfo">
       <p class = "sectionHeader">Policyholder Contact Info</p>
       <div class = "inputRow">
-        <div class="inputGrouping">
-          <div class="form-group has-feedback rowItem">
-            <label for="firstname" class="control-label">First Name</label>
-            <input id="firstname" type="text" class="form-control" name="firstname" data-error="Please enter your first name." aria-required="true" required/> 
-            <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
-          </div>                  
-        </div>
-        <div class="inputGrouping">
-          <div class="form-group has-feedback rowItem">
-            <label for="lastname" class="control-label">Last Name</label>
-            <input id="lastname" type="text" class="form-control" name="lastname" data-error="Please enter your last name." aria-required="true" required/> 
-            <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
-          </div>                  
-        </div>
+          <div class="inputGrouping">
+            <div class="form-group has-feedback rowItem">
+              <label for="firstname" class="control-label">First Name</label>
+              <input id="firstname" type="text" class="form-control" name="firstname" data-error="Please enter your first name." aria-required="true" required/> 
+              <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
+            </div>                  
+          </div>
+          <div class="inputGrouping">
+            <div class="form-group has-feedback rowItem">
+              <label for="lastname" class="control-label">Last Name</label>
+              <input id="lastname" type="text" class="form-control" name="lastname" data-error="Please enter your last name." aria-required="true" required/> 
+              <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
+            </div>                  
+          </div>
       </div>
       <div class="inputRow">
         <div class="inputGrouping">
@@ -28,7 +28,7 @@
             <label for="phone" class="control-label">Phone number (optional)</label>
             <input id="phonenumber" type="tel" class="form-control phone" name="phonenumber" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" placeholder="xxx-xxx-xxxx" data-error="That doesn't look quite right. Please enter your phone number in this format: xxx-xxx-xxxx." aria-required="false"/>
             <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
-          </div>                  
+          </div>                   
         </div>
         <div class="inputGrouping">
           <div class="form-group has-feedback">
@@ -38,38 +38,32 @@
           </div>
         </div>
       </div>
-      <div class="inputRow">
-        <div class="inputGrouping">
-          <div class="form-group has-feedback rowItem">
-            <label for="phone" class="control-label">Phone number (optional)</label>
-            <input id="phone" type="tel" class="form-control phone" name="phone-number" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" placeholder="xxx-xxx-xxxx" data-error="That doesn't look quite right. Please enter your phone number in this format: xxx-xxx-xxxx." aria-required="false"/>
-            <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
-          </div>                   
-        </div>
-      </div>
       <div class = "inputRow">
-        <div class="inputGrouping">
-          <div class="form-group has-feedback rowItem">
-            <label for="streetAddress" class="control-label">Street Address:</label>
-            <input id="pholderstreetaddress" type="text" class="form-control" name="pholderstreetaddress" data-error="Please enter your first name." aria-required="true" required/> 
-            <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
-          </div>                  
-        </div>
-        <div class="inputGrouping">
-          <div class="form-group has-feedback rowItem">
-            <label for="city" class="control-label">Town/City:</label>
-            <input id="pholdertown" type="text" class="form-control" name="pholdertown" data-error="Please enter your town or city." aria-required="true" required/> 
-            <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
-          </div>                 
-        </div>
-        <div class="inputGrouping">
-          <div class="form-group has-feedback">
-            <label for="zip" class="control-label">ZIP Code</label>
-            <input id="pholderzip" type="text" class="form-control zip" name="pholderzip" minlength="5" maxlength="10" placeholder="00000 or 00000-0000" pattern="(\d{5}([\-]\d{4})?)" data-error="Please enter your zip code." aria-required="true" required/>
-            <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
-          </div>                                  
-        </div>
+          <div class="inputGrouping">
+            <div class="form-group has-feedback rowItem">
+              <label for="streetAddress" class="control-label">Street Address:</label>
+              <input id="pholderstreetaddress" type="text" class="form-control" name="pholderstreetaddress" data-error="Please enter your first name." aria-required="true" required/> 
+              <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
+            </div>                  
+          </div>
+          <div class="inputGrouping">
+            <div class="form-group has-feedback rowItem">
+              <label for="city" class="control-label">Town/City:</label>
+              <input id="pholdertown" type="text" class="form-control" name="pholdertown" data-error="Please enter your town or city." aria-required="true" required/> 
+              <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
+            </div>                 
+          </div>
+          <div class="inputGrouping">
+            <div class="form-group has-feedback">
+              <label for="zip" class="control-label">ZIP Code</label>
+              <input id="pholderzip" type="text" class="form-control zip" name="pholderzip" minlength="5" maxlength="10" placeholder="00000 or 00000-0000" pattern="(\d{5}([\-]\d{4})?)" data-error="Please enter your zip code." aria-required="true" required/>
+              <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
+            </div>                                  
+          </div>
       </div>
+    </div>
+    <div class = "claimData">
+      <p class = "sectionHeader">Incident Report / Claim Data</p>
       <div class = "inputRow">
         <div class="inputGrouping">
           <fieldset class="form-group">
@@ -104,24 +98,27 @@
               <label class="radio-inline">
             <input type="radio" class="form-control" value="Uninsured and Underinsured Motorist Coverage" name="category" data-error="Please check one option" required>
             <span>Uninsured and Underinsured Motorist Coverage</span>
-          </label> 
-                        
+          </label>
+            
             </div>
             <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
+          </fieldset>
         </div>
         <div class="inputGrouping">
           <div class="form-group has-feedback rowItem">
             <label for="fName" class="control-label">Policy Number</label>
             <input id="policynumber" type="text" class="form-control" name="policynumber" data-error="Please enter your policynumber." aria-required="true" required/> 
             <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
-          </div>                 
+          </div>
         </div>
+      </div> 
+      <div class = "inputRow">
         <div class="inputGrouping">
           <div class="form-group has-feedback rowItem">
             <label for="fName" class="control-label">Location of Loss (Approximate Street Address)</label>
             <input id="location" type="text" class="form-control" name="location" data-error="Please enter your first name." aria-required="true" required/> 
             <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
-          </div>                                  
+          </div>
         </div>
         <div class="inputGrouping">
           <div class="form-group has-feedback disabled">
@@ -131,30 +128,21 @@
           </div>
         </div>
       </div>
-      <div class="inputRow">
-        <div class="inputGrouping">
-          <div class="form-group has-feedback rowItem">
-            <label for="policyNumber" class="control-label">Policy Number</label>
-            <input id="policyNumberSearch" type="text" pattern="^[A-Z]{2}-[0-9]{8}$" class="form-control" placeholder="XX-########" data-error="Please enter your policy number." name="policyNumber" aria-required="true" required/> 
-            <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
-          </div>
-        </div>
-      </div>
       <div class = "inputRow">
         <div class="inputGrouping">
           <div class="form-group has-feedback">
             <label for="comment">Description of Incident</label>
-            <textarea class="form-control" maxlength="250" rows="5" cols="50" id="incidentDescriptionInput" id="comment" aria-required="true" required></textarea><small class="textarea-character-limit"></small>
+            <textarea class="form-control" maxlength="250" rows="5" id="description" aria-required="true" required></textarea><small class="textarea-character-limit"></small>
             <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span><div class="help-block with-errors"></div>
           </div>
         </div>
       </div> 
       <div class="submit">
-        <button class="btn btn-secondary btn-block btn-border" onclick="submit">
-          <input type="submit" />
-          <span>Submit</span>
-        </button>
-      </div>
+          <button class="btn btn-secondary btn-block btn-border" onclick="submit">
+            <input type="submit" />
+            <span>Submit</span>
+          </button>
+        </div>
     </div>
   </form>
 </div>
