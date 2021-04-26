@@ -25,7 +25,7 @@ app.post('/addclaim', function (req, res) {
 	var pholderzip = req.body.pholderzip;
 	var policynumber = req.body.policynumber;
 	var location = req.body.location;
-	var latlong = getlocation(location);
+	getlocation(location);
 	var category = req.body.category;
 	var description = req.body.description;
 	res.send('Claim Submitted Successfully!');
@@ -52,7 +52,7 @@ var getlocation= function(req, res, next) {
 	});
 }
 
-app.get('/getclaim', function (req, res) {
+app.post('/getclaim', function (req, res) {
 	MongoClient.connect(url, function(err, db) {
 		if (err) throw err;
 		var dbo = db.db("testdb");
