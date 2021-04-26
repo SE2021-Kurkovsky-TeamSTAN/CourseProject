@@ -4,6 +4,10 @@ app.set('view engine', 'ejs');
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 
+var requestify = require('requestify'); 
+requestify.get("https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyCcaek9yMIWBA20Hr8a61-z8Uitf8Rw0hw");
+
+
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -21,7 +25,7 @@ app.post('/addclaim', function (req, res) {
 	var pholderzip = req.body.pholderzip;
 	var policynumber = req.body.policynumber;
 	var location = req.body.location;
-	var latlong = req.body.latlong;
+	var latlong = getlocation(location);
 	var category = req.body.category;
 	var description = req.body.description;
 	res.send('Claim Submitted Successfully!');
@@ -37,19 +41,27 @@ app.post('/addclaim', function (req, res) {
 	}); 
 });
 
-app.post('/getCoordinates', function (req, res) {
-});
+var getlocation= function(req, res, next) {
+	var API_KEY = "AIzaSyCGIOYXVitNDkRuViTP-xJ6X6fW-RJpk6w";
+	var baseurl = "https://maps.googleapis.com/maps/api/geocode/json?address=";
+	var address = req;
+	var url = baseurl + address + "&key=" + API_KEY;
+	requestify.get(url).then(function(response) {
+		response.getBody();
+		console.log(response);
+	});
+}
 
-app.post('/getclaim', function (req, res) {
+app.get('/getclaim', function (req, res) {
 	MongoClient.connect(url, function(err, db) {
-	if (err) throw err;
-	var dbo = db.db("testdb");
-	dbo.collection("claim").find({}).toArray(function(err, result) {
-    		if (err) throw err;
-		res.render('table.ejs', { claim : result});
-    		console.log(result);
-    		db.close();
-  	});
+		if (err) throw err;
+		var dbo = db.db("testdb");
+		dbo.collection("claim").find({}).toArray(function(err, result) {
+    			if (err) throw err;
+			res.render('table.ejs', { claim : result});
+    			console.log(result);
+    			db.close();
+  		});
 	});
 });
 
