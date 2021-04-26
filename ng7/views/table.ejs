@@ -1,0 +1,43 @@
+
+
+<!-- table.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>claims returned</title>
+  </head>
+
+  <body>
+    <h1>Results</h1>
+
+
+	<table>
+		<thead>	
+			<tr>
+				<th scope="col" class="col-xs-3">Category of Injury <i class="icon icon-caret-up-alt" aria-hidden="true"></i> </th>
+				<th scope="col" class="col-xs-3">Policy Number</th>
+				<th scope="col" class="col-xs-3">Location</th>
+				<th scope="col" class="col-xs-3">Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% for(var i=0;i<claim.length;i++) {%>
+				<tr>
+					<td><span class="data-prefix-xs xs-prefix-vertical"></span><%= claim[i].category %></td>
+					<td><span class="data-prefix-xs xs-prefix-vertical"></span><%= claim[i].policynumber %></td>
+					<td><span class="data-prefix-xs xs-prefix-vertical"></span><%= claim[i].location %></td>
+					<td><span class="data-prefix-xs xs-prefix-vertical"></span><%= claim[i].description %></td>					
+				</tr>
+			<% } %>
+		</tbody>
+	</table>
+	<a class="accordion-toggle collapsed" data-toggle="collapse" data-target=".sample-table-collapse" href="#" onclick="event.preventDefault()">
+		<div class="content-align">
+			<span class="content-table-span"></span>
+		</div>
+	</a>
+
+	
+  </body>
+</html>
