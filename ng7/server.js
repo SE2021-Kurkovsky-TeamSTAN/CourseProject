@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+app.set('view engine', 'ejs');
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 
@@ -39,32 +40,18 @@ app.post('/addclaim', function (req, res) {
 app.post('/getCoordinates', function (req, res) {
 });
 
-app.post('/getClaim', function (req, res) {
+app.post('/getclaim', function (req, res) {
 	MongoClient.connect(url, function(err, db) {
-  		if (err) throw err;
-  		var dbo = db.db("testdb");
-		dbo.collection("claim").find({}).toArray(function(err, result) {
-			if (err) throw err;
-			console.log(result);
-			db.close();
-  		});
-	}); 
+	if (err) throw err;
+	var dbo = db.db("testdb");
+	dbo.collection("claim").find({}).toArray(function(err, result) {
+    		if (err) throw err;
+		res.render('table.ejs', { claim : result});
+    		console.log(result);
+    		db.close();
+  	});
+	});
 });
-
-function createTable(tableData) {
-  var table = document.createElement('table');
-  var row = {};
-  var cell = {};
-
-  tableData.forEach(function(rowData) {
-    row = table.insertRow(-1); // [-1] for last position in Safari
-    rowData.forEach(function(cellData) {
-      cell = row.insertCell();
-      cell.textContent = cellData;
-    });
-  });
-  document.body.appendChild(table);
-}
 
 
 var server = app.listen(5000, function () {
