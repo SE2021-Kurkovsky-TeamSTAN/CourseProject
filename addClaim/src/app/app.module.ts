@@ -8,6 +8,8 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { GetClaimComponent } from './get-claim/get-claim.component';
+import { GetClaimResultComponent } from './get-claim-result/get-claim-result.component';
+import { AddClaimResultComponent } from './add-claim-result/add-claim-result.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { GetClaimComponent } from './get-claim/get-claim.component';
     NavComponent,
     FooterComponent,
     HomeComponent,
-    GetClaimComponent
+    GetClaimComponent,
+    GetClaimResultComponent,
+    AddClaimResultComponent
   ],
   imports: [
     BrowserModule,
